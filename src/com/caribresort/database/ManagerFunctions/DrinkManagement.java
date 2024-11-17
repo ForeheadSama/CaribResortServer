@@ -36,10 +36,10 @@ import com.caribresort.database.DBConnector;
  
  public class DrinkManagement {
      
-     private static Connection connection = DBConnector.getDatabaseConnection(); // Connection to the database
-     private static final Logger logger = LogManager.getLogger(DrinkManagement.class); // Logger object
+    private static Connection connection = DBConnector.getDatabaseConnection(); // Connection to the database
+    private static final Logger logger = LogManager.getLogger(DrinkManagement.class); // Logger object
  
-     public DrinkManagement() {
+    public DrinkManagement() {
          // Establish the connection to the database using DBConnectorFactory
          connection = DBConnector.getDatabaseConnection();
      } // End of constructor
@@ -155,15 +155,16 @@ import com.caribresort.database.DBConnector;
       * @return true if the update was successful, false otherwise
       */
      public static boolean updateDrink(Drink drink) {
-         String sqlQuery = "UPDATE Drinks SET drinkName = ?, unitPrice = ?, isAlcoholic = ?, quantity = ? WHERE drinkID = ?";
+        
+        String drinkID = drink.getDrinkID();
+        String sqlQuery = "UPDATE Drinks SET drinkName = ?, unitPrice = ?, isAlcoholic = ?, quantity = ? WHERE drinkID = '" + drinkID + "'";
  
          try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
              // Set the parameters for the prepared statement
              statement.setString(1, drink.getDrinkName());
              statement.setDouble(2, drink.getUnitPrice());
              statement.setBoolean(3, drink.getIsAlcoholic());
-             statement.setString(4, drink.getDrinkID());
-             statement.setInt(5, drink.getQuantity());
+             statement.setInt(4, drink.getQuantity());
  
              int rowsAffected = statement.executeUpdate(); // Execute the update query
              return rowsAffected > 0; // Returns true if update was successful
@@ -193,14 +194,16 @@ import com.caribresort.database.DBConnector;
              int rowsAffected = statement.executeUpdate(); // Execute the delete query
  
              // Log the successful removal
-             logger.info("[DATABASE] DRINK REMOVED SUCCESSFULLY [DRINK ID: " + drinkID + "]");
-             return rowsAffected > 0; // Returns true if removal was successful
+             logger.info("[DATABASE] DRINK REMOVED SUCCESSFULLY <ID: " + drinkID + ">");
              
+             if (rowsAffected > 0) { return true; }  // Returns true if removal was successful
+                else { return false; } // Returns false if removal failed
+                
          } // End of try block
          catch (SQLException e) {
              // Log the error if removing the drink fails
              e.printStackTrace();
-             logger.error("[DATABASE] ERROR REMOVING DRINK [" + drinkID + "] " + e.getMessage());
+             logger.error("[DATABASE] ERROR REMOVING DRINK <" + drinkID + "> " + e.getMessage());
              return false;
         
          } // End of catch block

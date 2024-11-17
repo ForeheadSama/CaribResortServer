@@ -42,9 +42,9 @@ public class NetworkConnector {
 					logger.info("[" + new Date().toString() + "] CONNECTED NEW CLIENT #" + clientCount); //print client count
 
                     if (connectionStatus){
-                        clientHandler.sendClient(new Response(true, "CONNECTED TO DATABASE", null));
+                        clientHandler.sendClient(new Response(true, "[SERVER] CONNECTED TO DATABASE", null));
                     }else{
-                        clientHandler.sendClient(new Response(false, "COULD NOT CONNECT TO DATABASE", null));
+                        clientHandler.sendClient(new Response(false, "[SERVER] COULD NOT CONNECT TO DATABASE", null));
                     }
                     
                 } catch (IOException e) {

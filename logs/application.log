@@ -118,3 +118,63 @@
 2024-11-15 16:08:16 [main] INFO  com.caribresort.server.NetworkConnector - [15:11:2024 16:08:16 PM] CONNECTED NEW CLIENT #1
 2024-11-15 16:08:19 [Thread-0] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
 2024-11-15 16:08:27 [Thread-0] INFO  com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] NEW ORDER INSERTED ID[93007]
+2024-11-16 23:33:54 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-16 23:33:54 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-16 23:34:03 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:34:03 PM] CONNECTED NEW CLIENT #1
+2024-11-16 23:36:11 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:36:11 PM] CONNECTED NEW CLIENT #2
+2024-11-16 23:38:05 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:38:05 PM] CONNECTED NEW CLIENT #3
+2024-11-16 23:38:49 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-16 23:38:49 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-16 23:38:55 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:38:55 PM] CONNECTED NEW CLIENT #1
+2024-11-16 23:46:51 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:46:51 PM] CONNECTED NEW CLIENT #2
+2024-11-16 23:48:24 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:48:24 PM] CONNECTED NEW CLIENT #3
+2024-11-16 23:52:26 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:52:26 PM] CONNECTED NEW CLIENT #4
+2024-11-16 23:52:50 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:52:50 PM] CONNECTED NEW CLIENT #5
+2024-11-16 23:52:50 [Thread-4] INFO  com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] DRINK INSERTED SUCCESSFULLY [DRINK ID: IT1008N]
+2024-11-16 23:52:50 [Thread-3] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-16 23:57:20 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-16 23:57:20 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-16 23:57:24 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:57:24 PM] CONNECTED NEW CLIENT #1
+2024-11-16 23:57:29 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:57:29 PM] CONNECTED NEW CLIENT #2
+2024-11-16 23:57:38 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:57:38 PM] CONNECTED NEW CLIENT #3
+2024-11-16 23:57:57 [main] INFO  com.caribresort.server.NetworkConnector - [16:11:2024 23:57:57 PM] CONNECTED NEW CLIENT #4
+2024-11-16 23:57:57 [Thread-3] INFO  com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] DRINK REMOVED SUCCESSFULLY [DRINK ID: IT1009N]
+2024-11-17 00:00:49 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:00:49 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:00:52 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:00:52 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:01:37 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:01:37 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:01:53 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:01:53 AM] CONNECTED NEW CLIENT #3
+2024-11-17 00:01:53 [Thread-2] INFO  com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] DRINK REMOVED SUCCESSFULLY [DRINK ID: IT1008N]
+2024-11-17 00:06:47 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:06:47 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:06:51 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:06:51 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:07:35 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:07:35 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:07:36 [Thread-1] ERROR com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] ERROR UPDATING DRINK [TS1007A] Data truncation: Truncated incorrect DECIMAL value: 'CC1003N'
+2024-11-17 00:09:54 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:09:54 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:10:05 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:10:05 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:10:20 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:10:20 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:10:58 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:10:58 AM] CONNECTED NEW CLIENT #3
+2024-11-17 00:10:58 [Thread-2] ERROR com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] ERROR UPDATING DRINK [TS1007A] No value specified for parameter 1
+2024-11-17 00:11:47 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:11:47 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:11:54 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:11:54 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:12:21 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:12:21 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:12:22 [Thread-1] ERROR com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] ERROR UPDATING DRINK [TS1007A] Data truncation: Truncated incorrect DECIMAL value: 'CC1003N'
+2024-11-17 00:14:10 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:14:10 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:14:13 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:14:13 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:15:53 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:15:53 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:15:56 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:15:56 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:16:21 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:16:21 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:16:22 [Thread-1] ERROR com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] ERROR UPDATING DRINK [TS1007A] Data truncation: Truncated incorrect DECIMAL value: 'CC1003N'
+2024-11-17 00:19:08 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:19:08 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:19:11 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:19:11 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:19:42 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:19:42 AM] CONNECTED NEW CLIENT #2
+2024-11-17 00:19:42 [Thread-1] ERROR com.caribresort.database.ManagerFunctions.DrinkManagement - [DATABASE] ERROR UPDATING DRINK [TS1007A] Parameter index out of range (5 > number of parameters, which is 4).
+2024-11-17 00:20:33 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-17 00:20:33 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-17 00:20:41 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:20:41 AM] CONNECTED NEW CLIENT #1
+2024-11-17 00:21:08 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:21:08 AM] CONNECTED NEW CLIENT #2

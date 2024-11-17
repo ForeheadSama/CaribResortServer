@@ -7,6 +7,7 @@ import java.net.SocketException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.caribresort.client.model.Drink;
 import com.caribresort.client.model.Order;
 import com.caribresort.database.ManagerFunctions.DrinkManagement;
 import com.caribresort.database.ManagerFunctions.OrderManagement.*; // Add this import statement
@@ -36,21 +37,46 @@ public class NetworkReceiver implements Runnable {
     private Response handleRequest(Request request) { 
         switch (request.getAction().toString()) {
             
-            case "NEW_ORDER":
-                //Assuming payload is an Order object
-                Order order = (Order) request.getData();
-                boolean isSuccess = InsertOrder.insertOrder(order);
+            case "NEW_ORDER":        
+                Order orderObject = (Order) request.getData();
+                boolean isSuccess = InsertOrder.insertOrder(orderObject);
 
                 if (isSuccess) {
-                    return new Response(true, "[Server] NEW ORDER PROCESSED", null);
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", null);
                 } else {
-                    return new Response(false, "[Server] FAILED TO PROCESS NEW ORDER: ", null);
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
+                
+            case "ADD_DRINK": 
+                Drink drinkObject = (Drink) request.getData();
+                boolean isDrinkSuccess = DrinkManagement.insertDrink(drinkObject);
+
+                if(isDrinkSuccess){
+                    return new Response(true, "[SERVER] NEW DRINK ADDED", null);
+                }else{
+                    return new Response(false, "[SERVER] FAILED TO ADD NEW DRINK", null);
                 }
 
-            // Handle other cases like "add_drink", "modify_drink", etc.
-            // case "ADD_DRINK": return new Response(true, "[Server] NEW ORDER PROCESSED");
-            // case "REMOVE_DRINK": return new Response(true, "[Server] NEW DRINK REMOVED");
-            // case "MODIFY_DRINK": return new Response(true, "[Server] NEW DRINK MODIFIED");
+            case "REMOVE_DRINK": 
+                var drinkId = (String) request.getData();
+                boolean isDrinkRemoveSuccess = DrinkManagement.removeDrink(drinkId);
+
+                if(isDrinkRemoveSuccess){
+                    return new Response(true, "[SERVER] DRINK REMOVED FROM DATABASE", null);
+                }else{
+                    return new Response(false, "[SERVER] FAILED TO REMOVE DRINK FROM DATABASE", null);
+                }
+
+            case "MODIFY_DRINK": 
+                Drink drinkObjectModify = (Drink) request.getData();
+                boolean isDrinkModifySuccess = DrinkManagement.updateDrink(drinkObjectModify);
+
+                if(isDrinkModifySuccess){
+                    return new Response(true, "[SERVER] DRINK MODIFIED SUCCESSFULLY", null);
+                }else{
+                    return new Response(false, "[SERVER] FAILED TO MODIFY DRINK", null);
+                }
+            
             // case "REMOVE_ORDER": return new Response(true, "[Server] NEW ORDER REMOVED");
             // case "MODIFY_ORDER": return new Response(true, "[Server] NEW ORDER MODIFIED");
             
@@ -76,7 +102,18 @@ public class NetworkReceiver implements Runnable {
                 else {
                     return new Response(false, "[SERVER] FAILED TO PULL ORDER ID OR NO ORDER ID AVAILABLE", null);
                 }
-                
+
+            case "PULL_DRINK_BY_NAME":
+                String drinkName = (String) request.getData();
+                String drink = DrinkManagement.getDrinkIDByName(drinkName);
+
+                if(drink != null){
+                    return new Response(true, "[SERVER] NEW ORDER DETAIL ID GENERATED FOR DRINK " + drink, drink);
+                }
+                else {
+                    return new Response(false, "[SERVER] FAILED TO PULL DRINK NAME OR NO DRINK NAME AVAILABLE", null);
+                }
+                // hey :D
             default:
                 return new Response(false, "[Server] UNKNOWN ACTION", null);
         

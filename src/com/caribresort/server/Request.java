@@ -15,7 +15,8 @@ public class Request implements Serializable {
         MODIFY_ORDER, 
         REMOVE_ORDER,
         PULL_ORDERS,
-        GENERATE_ORDER_ID
+        GENERATE_ORDER_ID,
+        PULL_DRINK_BY_NAME
     }
     
     private Action action;
