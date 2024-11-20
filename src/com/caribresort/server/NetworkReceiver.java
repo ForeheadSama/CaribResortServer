@@ -84,7 +84,8 @@ public class NetworkReceiver implements Runnable {
                     return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
                 }
             case "PULL_ORDERS_BY_Date":
-                var orders_by_date = ReadOrder.readAllOrders();
+                int[] date = (int[]) request.getData();
+                var orders_by_date = ReadOrder.selectOrdersByDate(date[0], date[1], date[2]);
 
                 if (orders_by_date != null) {
                     return new Response(true, "[SERVER] NEW ORDER PROCESSED", orders_by_date);
@@ -92,7 +93,8 @@ public class NetworkReceiver implements Runnable {
                     return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
                 }
             case "PULL_ORDERS_BY_Drink":
-                var orders_by_drink = ReadOrder.readAllOrders();
+                String drinkId = (String) request.getData();
+                var orders_by_drink = ReadOrder.getOrdersByDrink(drinkId);
 
                 if (orders_by_drink != null) {
                     return new Response(true, "[SERVER] NEW ORDER PROCESSED", orders_by_drink);
@@ -110,8 +112,8 @@ public class NetworkReceiver implements Runnable {
                 }
 
             case "REMOVE_DRINK": 
-                var drinkId = (String) request.getData();
-                boolean isDrinkRemoveSuccess = DrinkManagement.removeDrink(drinkId);
+                var drinkId_remove = (String) request.getData();
+                boolean isDrinkRemoveSuccess = DrinkManagement.removeDrink(drinkId_remove);
 
                 if(isDrinkRemoveSuccess){
                     return new Response(true, "[SERVER] DRINK REMOVED FROM DATABASE", null);
