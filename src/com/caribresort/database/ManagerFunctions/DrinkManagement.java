@@ -303,21 +303,5 @@ import com.caribresort.database.DBConnector;
  
          return success;
      } // End of updateDrinkQuantities method
- 
-     // Function to close the database connection
-     public static void closeConnection() {
-         try {
-             if (connection != null) { // Check if the connection is open
-                 connection.close(); // Close the connection
-                 System.out.println("Database connection closed!");
-             }
-         }  // End of try block
-         catch (SQLException e) { 
-             System.err.println("Error closing database connection: " + e.getMessage());
-         
-         } // End of catch block
-     
-     } // End of closeConnection method
- 
   } // End of DrinkManagement class
  

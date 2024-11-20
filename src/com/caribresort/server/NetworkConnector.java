@@ -63,8 +63,6 @@ public class NetworkConnector {
     // Method to close connections
     public void closeConnections() {
         try {
-            // if (input != null) input.close();
-            // if (output != null) output.close();
             if (clientSocket != null) clientSocket.close();
             if (serverSocket != null) serverSocket.close();
             logger.info("[NetworkConnector] Connections closed");
