@@ -178,3 +178,40 @@
 2024-11-17 00:20:33 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
 2024-11-17 00:20:41 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:20:41 AM] CONNECTED NEW CLIENT #1
 2024-11-17 00:21:08 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:21:08 AM] CONNECTED NEW CLIENT #2
+2024-11-19 22:46:55 [main] ERROR com.caribresort.database.DBConnector - [DATABASE] CONNECTION FAILED
+2024-11-19 22:52:00 [main] ERROR com.caribresort.database.DBConnector - [DATABASE] CONNECTION FAILED
+2024-11-19 22:52:54 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 22:52:54 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 22:53:10 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 22:53:10 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:00:34 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:00:34 PM] CONNECTED NEW CLIENT #2
+2024-11-19 23:11:40 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:11:40 PM] CONNECTED NEW CLIENT #3
+2024-11-19 23:19:20 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:19:20 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:28:24 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:28:24 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:28:31 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:28:31 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:31:49 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:31:49 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:33:19 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:33:19 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:33:24 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:33:24 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:35:45 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:35:45 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:35:56 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:35:56 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:38:16 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:38:16 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:38:37 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:38:37 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:40:49 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:40:49 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:40:51 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:40:51 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:43:58 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:43:58 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:44:08 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:44:08 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:44:24 [Thread-0] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.DeleteOrder - [DATABASE] ERROR DELETING ORDER WITH ID[123]
+Cannot delete or update a parent row: a foreign key constraint fails (`caribresort`.`orderdetails`, CONSTRAINT `fk_OrderID` FOREIGN KEY (`orderID`) REFERENCES `orders` (`orderID`))
+2024-11-19 23:47:08 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 23:47:08 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 23:47:17 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 23:47:17 PM] CONNECTED NEW CLIENT #1
+2024-11-19 23:48:50 [Thread-0] INFO  com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] NEW ORDER INSERTED ID[93856]
+2024-11-19 23:49:26 [Thread-0] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 23:49:35 [Thread-0] INFO  com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] NEW ORDER INSERTED ID[50355]

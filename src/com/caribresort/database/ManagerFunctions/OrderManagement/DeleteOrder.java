@@ -29,17 +29,17 @@ public class DeleteOrder {
         try {
             // START A TRANSACTION TO DELETE THE ORDER AND ITS DETAILS 
             connection.setAutoCommit(false);
- 
-            // DELETE THE ORDER
-            try (PreparedStatement orderStatement = connection.prepareStatement(orderDeleteSQL)) {
-                orderStatement.setInt(1, orderId); // SET ORDER ID IN QUERY
-                orderStatement.executeUpdate(); // EXECUTE DELETE STATEMENT
-            }
- 
+            
             // DELETE ALL ORDER DETAILS FOR THIS ORDER
             try (PreparedStatement detailsStatement = connection.prepareStatement(orderDetailsDeleteSQL)) {
                 detailsStatement.setInt(1, orderId); // SET ORDER ID IN QUERY
                 detailsStatement.executeUpdate(); // EXECUTE DELETE STATEMENT
+            }
+
+            // DELETE THE ORDER
+            try (PreparedStatement orderStatement = connection.prepareStatement(orderDeleteSQL)) {
+                orderStatement.setInt(1, orderId); // SET ORDER ID IN QUERY
+                orderStatement.executeUpdate(); // EXECUTE DELETE STATEMENT
             }
  
             // COMMIT THE TRANSACTION
@@ -90,16 +90,16 @@ public class DeleteOrder {
         try {
             // START A TRANSACTION
             connection.setAutoCommit(false);
- 
-            // DELETE ALL ORDERS
-            try (Statement orderStatement = connection.createStatement()) {
-                orderStatement.executeUpdate(orderDeleteSQL); // EXECUTE DELETE STATEMENT FOR ORDERS
-            } 
- 
+            
             // DELETE ALL ORDER DETAILS
             try (Statement detailsStatement = connection.createStatement()) {
                 detailsStatement.executeUpdate(orderDetailsDeleteSQL); // EXECUTE DELETE STATEMENT FOR ORDER DETAILS
             }
+
+            // DELETE ALL ORDERS
+            try (Statement orderStatement = connection.createStatement()) {
+                orderStatement.executeUpdate(orderDeleteSQL); // EXECUTE DELETE STATEMENT FOR ORDERS
+            } 
  
             // COMMIT THE TRANSACTION
             connection.commit(); 

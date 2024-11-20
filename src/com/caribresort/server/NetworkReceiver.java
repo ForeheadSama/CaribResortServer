@@ -85,6 +85,7 @@ public class NetworkReceiver implements Runnable {
                 }
             case "PULL_ORDERS_BY_Date":
                 int[] date = (int[]) request.getData();
+                System.out.println(date[0] + " " + date[1] + " " + date[2]);
                 var orders_by_date = ReadOrder.selectOrdersByDate(date[0], date[1], date[2]);
 
                 if (orders_by_date != null) {
