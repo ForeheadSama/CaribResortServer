@@ -46,4 +46,18 @@ package com.caribresort.database;
          // Return the connection (either new or already existing)
          return connection;
      }
+
+     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // FUNCTION TO CLOSE THE DATABASE CONNECTION
+    public static void closeConnection() {
+        try {
+            if (connection != null) {
+                connection.close(); // CLOSE DATABASE CONNECTION
+                System.out.println("Database connection closed!"); // PRINT SUCCESS MESSAGE
+            }
+        } catch (SQLException e) {
+            System.err.println("Error closing database connection: " + e.getMessage()); // HANDLE SQL EXCEPTION
+        }
+    } // END FUNCTION
  }

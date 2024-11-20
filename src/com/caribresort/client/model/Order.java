@@ -157,7 +157,8 @@ public class Order implements Serializable{
         return details.toString(); // Return the order details
     } // End toString
 
-    /**
+
+      /**
      * Creates an OrderDetails object with the correct drink ID from the database
      * @param drinkName The name of the drink to look up
      * @param quantity The quantity ordered
@@ -200,6 +201,5 @@ public class Order implements Serializable{
         
         return false;
     }
-
 
 }

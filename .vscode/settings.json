@@ -5,6 +5,8 @@
     "java.project.referencedLibraries": [
         "c:\\log4j-api-2.24.0.jar",
         "c:\\log4j-core-2.24.0.jar",
-        "c:\\mysql-connector-j-9.0.0\\mysql-connector-j-9.0.0.jar"
+        "c:\\mysql-connector-j-9.0.0\\mysql-connector-j-9.0.0.jar",
+        "lib/log4j-api-2.13.3.jar",
+        "lib/log4j-core-2.13.3.jar"
     ]
 }

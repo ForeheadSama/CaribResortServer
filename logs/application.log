@@ -178,3 +178,57 @@
 2024-11-17 00:20:33 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
 2024-11-17 00:20:41 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:20:41 AM] CONNECTED NEW CLIENT #1
 2024-11-17 00:21:08 [main] INFO  com.caribresort.server.NetworkConnector - [17:11:2024 00:21:08 AM] CONNECTED NEW CLIENT #2
+2024-11-19 18:09:56 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 18:09:56 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 19:09:28 [main] ERROR com.caribresort.server.NetworkConnector - [NetworkConnector] Error creating server socket: Address already in use: bind
+2024-11-19 19:09:53 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 19:09:53 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 19:23:24 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 19:23:24 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 19:53:55 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 19:53:55 PM] CONNECTED NEW CLIENT #1
+2024-11-19 19:54:01 [Thread-0] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 19:54:07 [Thread-0] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 19:55:27 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 19:55:27 PM] CONNECTED NEW CLIENT #2
+2024-11-19 20:11:55 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:11:55 PM] CONNECTED NEW CLIENT #3
+2024-11-19 20:12:02 [Thread-2] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:12:11 [Thread-2] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:14:17 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:14:17 PM] CONNECTED NEW CLIENT #4
+2024-11-19 20:14:21 [Thread-3] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:14:30 [Thread-3] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:23:52 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:23:52 PM] CONNECTED NEW CLIENT #5
+2024-11-19 20:23:56 [Thread-4] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:24:02 [Thread-4] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:25:37 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:25:37 PM] CONNECTED NEW CLIENT #6
+2024-11-19 20:25:44 [Thread-5] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:25:49 [Thread-5] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:30:37 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:30:37 PM] CONNECTED NEW CLIENT #7
+2024-11-19 20:30:41 [Thread-6] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:30:47 [Thread-6] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:32:43 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:32:43 PM] CONNECTED NEW CLIENT #8
+2024-11-19 20:32:46 [Thread-7] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:32:51 [Thread-7] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:34:24 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:34:24 PM] CONNECTED NEW CLIENT #9
+2024-11-19 20:34:27 [Thread-8] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:34:30 [Thread-8] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '0' for key 'PRIMARY'
+2024-11-19 20:35:18 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:35:18 PM] CONNECTED NEW CLIENT #10
+2024-11-19 20:35:48 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:35:48 PM] CONNECTED NEW CLIENT #11
+2024-11-19 20:35:51 [Thread-10] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:35:55 [Thread-10] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:41:46 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:41:46 PM] CONNECTED NEW CLIENT #12
+2024-11-19 20:41:49 [Thread-11] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:41:56 [Thread-11] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:42:45 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 20:42:45 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 20:42:52 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:42:52 PM] CONNECTED NEW CLIENT #1
+2024-11-19 20:42:57 [Thread-0] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:43:01 [Thread-0] ERROR com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] ERROR WITH ORDER INSERTION: Duplicate entry '1' for key 'PRIMARY'
+2024-11-19 20:51:08 [main] INFO  com.caribresort.database.DBConnector - [DATABASE] CONNECTION SUCCESSFUL
+2024-11-19 20:51:08 [main] INFO  com.caribresort.server.NetworkConnector - [DATABASE] DATABASE CONNECTION ESTABLISHED
+2024-11-19 20:52:27 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:52:27 PM] CONNECTED NEW CLIENT #1
+2024-11-19 20:52:38 [Thread-0] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 20:52:44 [Thread-0] INFO  com.caribresort.database.ManagerFunctions.OrderManagement.InsertOrder - [ORDER] NEW ORDER INSERTED ID[64150]
+2024-11-19 20:55:22 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 20:55:22 PM] CONNECTED NEW CLIENT #2
+2024-11-19 21:11:18 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 21:11:18 PM] CONNECTED NEW CLIENT #3
+2024-11-19 21:11:59 [Thread-2] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.
+2024-11-19 21:15:42 [main] INFO  com.caribresort.server.NetworkConnector - [19:11:2024 21:15:42 PM] CONNECTED NEW CLIENT #4
+2024-11-19 21:16:07 [Thread-3] INFO  com.caribresort.server.NetworkReceiver - [SERVER] ALL DRINKS RECEIVED.

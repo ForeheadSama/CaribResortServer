@@ -158,4 +158,15 @@ public class NetworkReceiver implements Runnable {
 			} //ends try/catch
         }
     }
+
+    public void closeConnections() {
+        try {
+            if (input != null) input.close();
+            if (output != null) output.close();
+            if (clientSocket != null) clientSocket.close();
+            logger.info("[NetworkReceiver] Connections closed");
+        } catch (IOException e) {
+            logger.error("[NetworkReceiver] Error closing connections: " + e.getMessage());
+        }
+    }
 } // END CLASS
