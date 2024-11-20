@@ -46,7 +46,59 @@ public class NetworkReceiver implements Runnable {
                 } else {
                     return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
                 }
-                
+
+            case "REMOVE_ORDER": 
+                int orderId1 = (Integer) request.getData();
+                boolean isRemoved = DeleteOrder.deleteOrder(orderId1);
+
+                if (isRemoved) {
+                    return new Response(true, "[SERVER] ORDER WAS REMOVED", null);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO REMOVED ORDER: ", null);
+                }
+
+            case "MODIFY_ORDER": 
+                Order modifyOrderObject = (Order) request.getData();
+                boolean modifySuccess = UpdateOrder.updateOrder(modifyOrderObject);
+
+                if (modifySuccess) {
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", null);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
+            case "PULL_ORDER":
+                int orderid = (Integer) request.getData();
+                var order = ReadOrder.readOrder(orderid);
+
+                if (order != null) {
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", order);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
+            case "PULL_ORDERS":
+                var orders = ReadOrder.readAllOrders();
+
+                if (orders != null) {
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", orders);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
+            case "PULL_ORDERS_BY_Date":
+                var orders_by_date = ReadOrder.readAllOrders();
+
+                if (orders_by_date != null) {
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", orders_by_date);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
+            case "PULL_ORDERS_BY_Drink":
+                var orders_by_drink = ReadOrder.readAllOrders();
+
+                if (orders_by_drink != null) {
+                    return new Response(true, "[SERVER] NEW ORDER PROCESSED", orders_by_drink);
+                } else {
+                    return new Response(false, "[SERVER] FAILED TO PROCESS NEW ORDER: ", null);
+                }
             case "ADD_DRINK": 
                 Drink drinkObject = (Drink) request.getData();
                 boolean isDrinkSuccess = DrinkManagement.insertDrink(drinkObject);
@@ -76,10 +128,7 @@ public class NetworkReceiver implements Runnable {
                 }else{
                     return new Response(false, "[SERVER] FAILED TO MODIFY DRINK", null);
                 }
-            
-            // case "REMOVE_ORDER": return new Response(true, "[Server] NEW ORDER REMOVED");
-            // case "MODIFY_ORDER": return new Response(true, "[Server] NEW ORDER MODIFIED");
-            
+
             case "PULL_DRINKS": 
                 var drinks = DrinkManagement.getAllDrinks();
                 
